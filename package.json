@@ -1,11 +1,11 @@
-{
-	"name": "burger",
+
+	"name": "handlebarsjsstarter",
 	"version": "1.0.0",
-	"description": "burger",
+	"description": "handlebarsjsstarter",
 	"scripts": {
 		"prestart": "babel-node buildScripts/startMessage.js",
 		"start": "npm-run-all --parallel security-check open:src lint:watch",
-		"open:src": "babel-node buildScripts/srcServer.js",
+		"open:src": "babel-node server.js",
 		"lint": "esw",
 		"lint:watch": "npm run lint -- --watch",
 		"security-check": "nsp check"
@@ -13,11 +13,14 @@
 	"author": "Sean O'Sullivan",
 	"license": "MIT",
 	"dependencies": {
-		"whatwg-fetch": "1.0.0",
 		"body-parser": "^1.18.2",
+		"es6-promise": "^4.2.4",
+		"express": "4.16.0",
 		"express-handlebars": "^3.0.0",
 		"jquery": "^3.3.1",
-		"express": "4.16.0"
+		"mysql2": "^1.5.2",
+		"sequelize": "^4.32.7",
+		"whatwg-fetch": "^2.0.3"
 	},
 	"devDependencies": {
 		"babel-cli": "6.16.0",
